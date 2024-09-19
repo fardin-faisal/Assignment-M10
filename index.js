@@ -39,3 +39,13 @@ function testFilterEvenNumbers() {
   const arr = document.getElementById('evenArray').value.split(',').map(Number);
   document.getElementById('evenResult').innerText = "Even Numbers are: " + filterEvenNumbers(arr).join(', ');
 }
+
+// 5. sort Array in Descending order
+function sortArrayDescending(arr) {
+  return arr.sort((a, b) => b - a);
+}
+
+function testSortArrayDescending() {
+  const arr = document.getElementById('sortArray').value.split(',').map(Number);
+  document.getElementById('sortResult').innerText = "Sorted Array In Descending Order: " + sortArrayDescending(arr).join(', ');
+}
