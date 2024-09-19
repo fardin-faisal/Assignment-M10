@@ -29,3 +29,13 @@ function testFindMin() {
     const arr = document.getElementById('minArray').value.split(',').map(Number);
     document.getElementById('minResult').innerText = "Minimum: " + findMin(arr);
 }
+
+// 4. filtering Even Numbers
+function filterEvenNumbers(arr) {
+  return arr.filter(num => num % 2 === 0);
+}
+
+function testFilterEvenNumbers() {
+  const arr = document.getElementById('evenArray').value.split(',').map(Number);
+  document.getElementById('evenResult').innerText = "Even Numbers are: " + filterEvenNumbers(arr).join(', ');
+}
