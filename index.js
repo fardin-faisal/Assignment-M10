@@ -9,3 +9,13 @@ function testCalculateDifference() {
   document.getElementById("diffResult").innerText =
     "Difference: " + calculateDifference(num1, num2);
 }
+
+// 2. Checking Odd Number
+function isOdd(num) {
+  return num % 2 !== 0;
+}
+
+function testIsOdd() {
+  const num = parseInt(document.getElementById('oddNum').value);
+  document.getElementById('oddResult').innerText = isOdd(num) ? "The number is odd" : "The number is not odd";
+}
