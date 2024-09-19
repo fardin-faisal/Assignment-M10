@@ -64,3 +64,15 @@ function testLowercaseFirstLetter() {
   document.getElementById("lowerResult").innerText =
     "Modified String: " + lowercaseFirstLetter(str);
 }
+
+// 7. counting Vowels
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
+  return str.split("").filter((char) => vowels.includes(char)).length;
+}
+
+function testCountVowels() {
+  const str = document.getElementById("vowelString").value;
+  document.getElementById("vowelResult").innerText =
+    "Total Vowel Count: " + countVowels(str);
+}
