@@ -56,6 +56,19 @@ function testSortArrayDescending() {
 
 // 6. lowercase First Letter fo a String
 function lowercaseFirstLetter(str) {
+  // Function to check if a character is a letter
+  function isLetter(char) {
+    return (char >= "A" && char <= "Z") || (char >= "a" && char <= "z");
+  }
+
+  // Check if all characters in the string are letters
+  for (let i = 0; i < str.length; i++) {
+    if (!isLetter(str[i])) {
+      return "Input should contain only letters.";
+    }
+  }
+
+  // If the input is valid, lowercase the first letter
   return str.charAt(0).toLowerCase() + str.slice(1);
 }
 
