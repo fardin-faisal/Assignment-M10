@@ -76,3 +76,18 @@ function testCountVowels() {
   document.getElementById("vowelResult").innerText =
     "Total Vowel Count: " + countVowels(str);
 }
+
+// 8. finds Average
+function findAverage(arr) {
+  const sum = arr.reduce((i, num) => i + num, 0);
+  return sum / arr.length;
+}
+
+function testFindAverage() {
+  const arr = document
+    .getElementById("averageArray")
+    .value.split(",")
+    .map(Number);
+  document.getElementById("averageResult").innerText =
+    "The Average: " + findAverage(arr);
+}
